@@ -4,9 +4,9 @@ metadata:
   name: my-node-app
 spec:
   type: NodePort
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30002  # Change this to an unused port
   selector:
     app: my-node-app
-  ports:
-    - port: 3000
-      targetPort: 3000
-      nodePort: 30001
